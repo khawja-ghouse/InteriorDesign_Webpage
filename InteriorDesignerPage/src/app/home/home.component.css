@@ -2,7 +2,7 @@
   background-image: url('../../assets/landing_page_2.jpg');
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,7 +30,6 @@
 
 .description p {
   margin: 16px;
-
   z-index: 9;
   font-family: "EB Garamond";
   font-style: italic;
@@ -71,4 +70,31 @@
 
 .square-button:hover {
   background-color: #693419;
+}
+
+
+.animateDescription {
+  animation-name: animateDescription;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+}
+
+@keyframes animateDescription {
+  100% {
+    transform: translatey(100px);
+  }
+}
+
+.animateViewButton {
+  animation-name: animateViewButton;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+}
+
+@keyframes animateViewButton {
+  100% {
+    transform: translatey(100px);
+  }
 }
