@@ -1,14 +1,107 @@
+.menu {
+  height: 75px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: -webkit-fill-available;
+  transition: all 900ms;
+}
+
+
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animateMenu {
+  animation: slideFromTop 700ms ease-in-out 700ms; /* Control the delay (1s) and animation duration (1s) */
+}
+
+.menu .logo {
+  margin-right: 500px;
+  margin-top: 5px;
+  margin-left: 150px;
+  color: #fff;
+  font-weight: 600;
+  font-size: medium;
+}
+
+.menu nav {
+  height: 50px;
+  opacity: 1;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  font-family: Poppins,sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  cursor: pointer;
+  color: #886a7f;
+}
+
+.scrolled {
+  /* background-color: #dccbdc; */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 900ms;
+}
+
+.scrolled .logo{
+  color: #000;
+}
+
+.scrolled a {
+  display: block;
+  color:#343434
+}
+
+.scrolled a:hover {
+  transition: color .3s ease-out;
+  cursor: pointer;
+  color: #923206;
+}
+
+
+
+
+
+
 .landing-page {
-  background-image: url('../../assets/landing_page_2.jpg');
+  background-image: url('../../assets/landing_image_6.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   color: #fff;
-  padding-top: 50px;
+  padding-top: 1px;
 }
 
 .landing-page h1 {
@@ -21,31 +114,37 @@
 }
 
 .description {
-  background-color: rgb(100, 78, 46);
   width: 70%;
+  margin-top: 200PX;
   height: 140px;
   opacity: 0.8;
-  margin-left: 50px;
+  margin-left: 350px;
 }
 
+
+/* @font-face {
+  font-family: Abel;
+  src: url(../../assets/Abel-Regular.ttf);
+} */
 .description p {
-  margin: 16px;
+  margin: 10px;
   z-index: 9;
   font-family: "EB Garamond";
+  letter-spacing: 30px;
   font-style: italic;
   height: auto;
-  color: rgb(245, 241, 239);
+  color: #fff;
   text-decoration: none;
   white-space: normal;
   min-height: 0px;
   min-width: 0px;
   max-height: none;
   max-width: none;
-  text-align: center;
+  text-align: left;
   line-height: 52px;
-  letter-spacing: 0px;
-  font-weight: 600;
-  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 50px;
   transform-origin: 50% 50%;
   transform: translate(1px, 0px);
   visibility: visible;
@@ -61,15 +160,17 @@
   opacity: 1;
   transition: background-color 0.3s ease;
   font-weight: 500;
-  margin-top: 15px;
-  margin-left: 80px;
+  margin-top: 60px;
+  margin-left: 480px;
   padding-top: 10px;
   font-family: Poppins,sans-serif;
   font-size: 14px;
+  letter-spacing: 2px;
 }
 
 .square-button:hover {
-  background-color: #693419;
+  background-color: white;
+  color: #000;
 }
 
 
@@ -98,3 +199,169 @@
     transform: translatey(100px);
   }
 }
+
+
+.about-page {
+  /* background-color: #dccbdc; */
+  height: 200vh;
+  position: relative;
+  /* padding: 1px; */
+  width: -webkit-fill-available;
+}
+
+
+/* About page section 1 */
+.about-page .subSectionOne {
+
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+
+  .flexItem:first-child  {
+    background-image: url("../../assets/furnitureImage.jpg");
+    background-size: cover;
+    margin-right: 60px;
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 700px;
+    height: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .flexItem:nth-child(2) {
+    height: auto;
+    margin-top: 250px;
+    width: 650px;
+  }
+
+  .flexItem:nth-child(2) p {
+    z-index: 9;
+    height: auto;
+    color: #343434;
+    text-decoration: none;
+    white-space: normal;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    text-align: left;
+    letter-spacing: 1px;
+    font-weight:500;
+    font-size: 23px;
+  }
+
+  .flexItem:nth-child(2) h2 {
+    font-family: Poppins,sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: #000;
+    font-size: 22px;
+    line-height: 1.4em;
+    font-weight: 600;
+    margin: 25px 0;
+    word-wrap: break-word;
+  }
+
+  .square-button-about {
+    width: 150px;
+    height: 70px;
+    border-color: rgb(255, 255, 255);
+    /* border-radius: 2px; */
+    color: black;
+    /* background-color: rgba(0, 0, 0, 0); */
+    opacity: 1;
+    transition: background-color 0.9s ease;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 165px;
+    padding-top: 10px;
+    font-family: Poppins,sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .square-button-about:hover {
+    background-color: #aeb89b;
+  }
+}
+
+.about-page .subSectionTwo {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 100px;
+
+  .secondSectionItem:first-child {
+    background-image: url("../../assets/livingRoom.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+    opacity: 1;
+    width: 400px;
+    height: 400px;
+    transition: transform 0.3s ease;
+  }
+
+  .secondSectionItem:first-child:hover{
+    transform: scale(1.1);
+  }
+
+  .secondSectionItem:nth-child(2) {
+    background-image: url("../../assets/kitchenRoom.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+    width: 400px;
+    height: 400px;
+    transition: transform 0.3s ease;
+  }
+  .secondSectionItem:nth-child(2):hover{
+    transform: scale(1.1);
+  }
+
+  .secondSectionItem:nth-child(3) {
+    background-image: url("../../assets/Bed_Room_Images.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+    width: 400px;
+    height: 400px;
+    transition: transform 0.3s ease;
+  }
+  .secondSectionItem:nth-child(3):hover{
+    transform: scale(1.1);
+  }
+
+  .button-text {
+    font-size: 16px;
+    color: #000;
+    z-index: 10;
+    position: relative;
+    z-index: 10;
+    left: 150px;
+    top:-25px;
+    font-family: Poppins,sans-serif;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+
+  .subSectionTwo a span{
+    margin-top: 200px;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+

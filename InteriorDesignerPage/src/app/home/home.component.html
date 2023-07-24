@@ -1,13 +1,51 @@
-<div class="landing-page">
-  <!-- <h1>Welcome to Woodcraft Interior</h1> -->
+<div [class]="isScrolled ? 'scrolled' : ''" class="menu animateMenu">
+  <nav *ngIf="shouldBeVisible" id="menuBlock">
+    <ul>
+      <li><a class="logo">WOODCRAFT INTERIOR</a></li>
+      <li><a href="#homePage">Home</a></li>
+      <li><a href="#aboutSection">About</a></li>
+      <li><a href="#ContactSection">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+<div id="homePage" class="landing-page">
   <div class="description animateDescription">
-    <p>Experience the transformative power of woodwork interior design
-      as we create stunning, custom-crafted designs that elevate your living spaces.</p>
-    <!-- <p> Our team of skilled artisans combines expertise and creativity to bring your vision to life, ensuring a perfect
-      blend of functionality and aesthetics.</p> -->
+    <p>"Experience the transformative power of custom-crafted woodwork interior design that elevates your living spaces"
+    </p>
   </div>
   <div class="animateViewButton"><button class="square-button">VIEW MORE</button></div>
-    
-  </div>
-<router-outlet></router-outlet>
+</div>
 
+<div class="about-page" id="aboutSection">
+
+  <div class="subSectionOne">
+
+    <div class="flexItem">
+      <!-- <img src="../../assets/aboutSectionOne.jpg" alt=""> -->
+    </div>
+
+    <div class="flexItem">
+      <h2>FURNITURE</h2>
+      <p>Furniture is the soul of interior design, adding character and functionality to any space. <strong>Woodcraft</strong> takes
+        great pride in handcrafting exquisite furniture that artfully merges timeless craftsmanship with modern design.
+        Every piece is meticulously created as a masterpiece, adding both beauty and comfort to your living spaces.
+      </p>
+      <button class="square-button-about">VIEW MORE</button>
+    </div>
+  </div>
+
+  <div class="subSectionTwo">
+    <a class="secondSectionItem" href="#">
+      <span class="button-text move-center">LIVING ROOM</span>
+    </a>
+    <a class="secondSectionItem" href="#">
+      <span class="button-text move-center">KITCHEN</span>
+    </a>
+    <a class="secondSectionItem" href="#">
+      <span class="button-text move-center">BED ROOM</span>
+    </a>
+  </div>
+
+</div>
