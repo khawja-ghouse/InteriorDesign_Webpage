@@ -1,0 +1,51 @@
+<div id="homePage" class="landing-page">
+    <div class="description animateDescription">
+      <p>"Design your dream bedroom with our custom-crafted wooden furniture."</p>
+    </div>
+  </div>
+  
+  <div class="bedroom-gallery">
+    <h1>Bedroom Collection</h1>
+  
+     <!-- Section: Wardrobe -->
+  <div class="gallery-section">
+    <h2>Wardrobe</h2>
+    <div class="carousel">
+      <button class="arrow left-arrow" (click)="prevSlide('wardrobe')">&#8249;</button>
+      <div class="gallery">
+        <div class="gallery-item" *ngFor="let image of visibleWardrobeImages">
+          <img [src]="image.src" [alt]="image.alt">
+        </div>
+      </div>
+      <button class="arrow right-arrow" (click)="nextSlide('wardrobe')">&#8250;</button>
+    </div>
+  </div>
+
+  <!-- Section: Cot -->
+  <div class="gallery-section">
+    <h2>Cot</h2>
+    <div class="carousel">
+      <button class="arrow left-arrow" (click)="prevSlide('cot')">&#8249;</button>
+      <div class="gallery">
+        <div class="gallery-item" *ngFor="let image of visibleCotImages">
+          <img [src]="image.src" [alt]="image.alt">
+        </div>
+      </div>
+      <button class="arrow right-arrow" (click)="nextSlide('cot')">&#8250;</button>
+    </div>
+  </div>
+
+  <!-- Section: Study Table -->
+  <div class="gallery-section">
+    <h2>Study Table</h2>
+    <div class="carousel">
+      <button class="arrow left-arrow" (click)="prevSlide('studyTable')">&#8249;</button>
+      <div class="gallery">
+        <div class="gallery-item" *ngFor="let image of visibleStudyTableImages">
+          <img [src]="image.src" [alt]="image.alt">
+        </div>
+      </div>
+      <button class="arrow right-arrow" (click)="nextSlide('studyTable')">&#8250;</button>
+    </div>
+  </div>
+  </div>

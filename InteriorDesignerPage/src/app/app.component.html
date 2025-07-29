@@ -1,1 +1,23 @@
-<app-home></app-home>
+<!-- <app-home></app-home> -->
+<div [class]="isScrolled ? 'scrolled' : ''" class="menu animateMenu">
+    <nav *ngIf="shouldBeVisible" id="menuBlock">
+      <ul>
+        <li><a class="logo">WOODMIND INTERIORS</a></li>
+        <li><a href="#homePage">Home</a></li>
+        <li class="menu-item">
+            <a href="#">Services</a>
+            <ul class="dropdown">
+            <li><a routerLink="/living-room">Living Room</a></li>
+            <li><a routerLink="/bedroom">Bedroom</a></li>
+            <li><a routerLink="/kitchen">Kitchen</a></li>
+            <li><a routerLink="/study-area">Study Area</a></li>
+            <li><a routerLink="/manymore">Many More</a></li>
+            </ul>
+        </li>
+       <li><a href="/about">About</a></li>
+        <li><a href="#ContactSection">Contact</a></li>
+
+      </ul>
+    </nav>
+  </div>
+<router-outlet></router-outlet>

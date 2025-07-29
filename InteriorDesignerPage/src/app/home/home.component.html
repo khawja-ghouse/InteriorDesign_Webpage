@@ -1,49 +1,106 @@
-<div [class]="isScrolled ? 'scrolled' : ''" class="menu animateMenu">
-  <nav *ngIf="shouldBeVisible" id="menuBlock">
-    <ul>
-      <li><a class="logo">WOODCRAFT INTERIOR</a></li>
-      <li><a href="#homePage">Home</a></li>
-      <li><a href="#aboutSection">About</a></li>
-      <li><a href="#ContactSection">Contact</a></li>
-    </ul>
-  </nav>
-</div>
-
-
 <div id="homePage" class="landing-page">
   <div class="description animateDescription">
-    <p>"Experience the transformative power of custom-crafted woodwork interior design that elevates your living spaces"
+    <p>"Handcrafted furniture that defines modern homes."
     </p>
   </div>
-  <div class="animateViewButton"><button class="square-button">VIEW MORE</button></div>
 </div>
+
+
+<div class="stats-section">
+  <div class="stats-cards">
+    <div class="stats-card">
+      <div class="stats-card-icon">
+        <!-- Replace with your icon SVG or <img> -->
+        <span class="material-icons">home</span>
+      </div>
+      <div class="stats-card-main">
+        <div class="stats-card-number">20</div>
+        <div class="stats-card-label">Years of experience in interior design</div>
+      </div>
+    </div>
+    <div class="stats-card">
+      <div class="stats-card-icon">
+        <span class="material-icons">apartment</span>
+      </div>
+      <div class="stats-card-main">
+        <div class="stats-card-number">200+</div>
+        <div class="stats-card-label">Successfully completed projects</div>
+      </div>
+    </div>
+    <div class="stats-card">
+      <div class="stats-card-icon">
+        <span class="material-icons">groups</span>
+      </div>
+      <div class="stats-card-main">
+        <div class="stats-card-number">20+</div>
+        <div class="stats-card-label">Expert Furniture Craftsmen</div>
+      </div>
+    </div>
+    <div class="stats-card">
+      <div class="stats-card-icon">
+        <span class="material-icons">emoji_events</span>
+      </div>
+      <div class="stats-card-main">
+        <div class="stats-card-number">12</div>
+        <div class="stats-card-label">Awards for excellence in interior design</div>
+      </div>
+    </div>
+  </div>
+  <div class="stats-description">
+    <div class="stats-desc-title">
+      <span class="stats-desc-subtitle">— WHO WE ARE</span>
+      <h2>We create things<br>that matter</h2>
+    </div>
+    <p>
+      Arcu viverra ut quis gravida luctus. Scelerisque elit massa purus morbi pellentesque tincidunt nulla. Aliquet molestie felis consectetur cras. Sit est facilisi pharetra quisque.
+    </p>
+    <button class="stats-desc-btn">MORE ABOUT &rsaquo;</button>
+  </div>
+</div>
+
+<div class="whyus-section">
+  <div class="whyus-content">
+    <span class="whyus-subtitle">— WHY US?</span>
+    <h2>We conduct all<br>business with the<br>highest standards</h2>
+    <p>
+      Phasellus at eu adipiscing orci, est cras. Sed sed pulvinar sollicitudin purus tincidunt volutpat. Duis id diam commodo eros. Turpis proin molestie ut rhoncus.
+    </p>
+    <p>
+      diam sed cursus nisl. Ligula purus rhoncus ac malesuada. Elit eget tortor, varius quam aliquet.
+    </p>
+    <button class="whyus-btn">LEARN MORE &rsaquo;</button>
+  </div>
+  <div class="whyus-images">
+    <img class="whyus-img-main" src="assets/whyus-main.jpg" alt="Why Us Main" />
+    <img class="whyus-img-overlay" src="assets/whyus-overlay.jpg" alt="Why Us Overlay" />
+  </div>
+</div>
+
+<div class="whatwedo-section">
+  <div class="whatwedo-image">
+    <img src="assets/whatwedo-main.jpg" alt="What We Do" />
+  </div>
+  <div class="whatwedo-content">
+    <span class="whatwedo-subtitle">— WHAT WE DO</span>
+    <h2>We know how to<br>deliver your vision</h2>
+    <p>
+      Id proin feugiat vitae ipsum tincidunt velit egestas. Ac posuere volutpat consectetur donec eu sed. Tincidunt tortor ac consectetur aliquam aliquet pellentesque. Mollis in gravida diam pharetra consectetur.
+    </p>
+    <button class="whatwedo-btn">OUR SERVICES &rsaquo;</button>
+  </div>
+</div>
+
 
 <div class="about-page" id="aboutSection">
 
-  <div class="subSectionOne">
-
-    <div class="flexItem">
-      <!-- <img src="../../assets/aboutSectionOne.jpg" alt=""> -->
-    </div>
-
-    <div class="flexItem">
-      <h2>FURNITURE</h2>
-      <p>Furniture is the soul of interior design, adding character and functionality to any space. <strong>Woodcraft</strong> takes
-        great pride in handcrafting exquisite furniture that artfully merges timeless craftsmanship with modern design.
-        Every piece is meticulously created as a masterpiece, adding both beauty and comfort to your living spaces.
-      </p>
-      <button class="square-button-about">VIEW MORE</button>
-    </div>
-  </div>
-
   <div class="subSectionTwo">
-    <a class="secondSectionItem" href="#">
+    <a class="secondSectionItem" routerLink="/living-room">
       <span class="button-text move-center">LIVING ROOM</span>
     </a>
-    <a class="secondSectionItem" href="#">
+    <a class="secondSectionItem" routerLink="/kitchen">
       <span class="button-text move-center">KITCHEN</span>
     </a>
-    <a class="secondSectionItem" href="#">
+    <a class="secondSectionItem" routerLink="/bedroom">
       <span class="button-text move-center">BED ROOM</span>
     </a>
   </div>

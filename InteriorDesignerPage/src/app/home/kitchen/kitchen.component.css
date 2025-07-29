@@ -1,0 +1,91 @@
+.landing-page {
+    background-image: url('../../../assets/Kitchen-Images/Kitchen_Landing_4.0.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    padding-top: 1px;
+}
+
+.landing-page h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.landing-page p {
+    font-size: 1.5rem;
+}
+
+.description {
+    width: 70%;
+    margin-top: 150px;
+    height: auto;
+    opacity: 0.9; /* Adjust overall opacity of the description */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px; /* Add padding inside the box */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    border-radius: 10px; /* Rounded corners for the box */
+    text-align: center; /* Center-align the text */
+    color: #fff; /* White text color for contrast */
+}
+
+.description p {
+    z-index: 9;
+    font-family: "EB Garamond";
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #fff; /* Ensure text is visible on the background */
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.kitchen-gallery {
+    padding: 45px;
+    text-align: center;
+}
+
+.kitchen-gallery h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 images per row */
+    gap: 25px; /* Space between images */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure the item takes full width of the grid cell */
+    padding-top: 100%; /* Maintain a square aspect ratio */
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the square area */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}

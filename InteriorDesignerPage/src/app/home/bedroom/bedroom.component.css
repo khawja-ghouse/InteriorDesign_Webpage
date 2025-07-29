@@ -1,0 +1,140 @@
+.landing-page {
+    background-image: url('../../../assets/Bedroom/Bedroom_Landing.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+  }
+  
+  .landing-page .description {
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .landing-page .description p {
+    font-family: "EB Garamond";
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #fff;
+  }
+  
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .arrow {
+    background-color: rgba(255, 255, 255, 0.6); /* Softer background */
+    color: #333; /* Dark icon for better contrast */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Light border for definition */
+    font-size: 1.8rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 12px; /* Rounded corners */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px); /* Optional blur for glassmorphism effect */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  .arrow:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    gap: 45px; /* Space between images */
+    width: 100%;
+    max-width: 1100px; /* Increase the gallery width */
+    overflow: hidden; /* Hide any overflowing content */
+  }
+
+  /* Background for the entire page */
+.bedroom-gallery {
+    /* background-image: url('../../../assets/Bedroom/bedroomBackground-1.png'); Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #fff; /* Ensure text is readable on the background */
+  }
+  
+  /* Background for the image section */
+  .gallery-section {
+    background-image: url('../../../assets/Bedroom/bedRoomLanding.png'); /* Replace with your image section background path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better appearance */
+  }
+
+  .bedroom-gallery h1,
+.bedroom-gallery h2,
+.bedroom-gallery p {
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    padding-top: 120%; /* Increase the height of the images */
+  }
+  
+  .gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.1);
+  }
